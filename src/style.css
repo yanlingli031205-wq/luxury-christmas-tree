@@ -114,4 +114,49 @@ body {
 #wish-input {
   background: transparent;
   border: none;
-  border-bottom:
+  border-bottom: 1px solid #666;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin-bottom: 2rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#wish-input:focus {
+  border-bottom: 1px solid var(--gold);
+}
+
+#wish-submit {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 12px 40px;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#wish-submit:hover {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 0 20px var(--gold);
+}
+
+#close-modal {
+  position: absolute;
+  top: 15px; right: 20px;
+  color: #666;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+#close-modal:hover { color: #fff; }
+
+.hidden { display: none !important; }
