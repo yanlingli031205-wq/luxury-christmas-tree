@@ -1,4 +1,4 @@
-/* 引入谷歌字体 */
+﻿/* 引入谷歌字体 */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital@0;1&display=swap');
 
 :root {
@@ -29,13 +29,16 @@ body {
 /* --- 1. 电影感开场字幕 --- */
 #intro-text {
   position: absolute;
-  top: 50%;
+  /* 之前是 top: 50%; 现在改成 bottom */
+  bottom: 10%; 
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* 之前是 translate(-50%, -50%); 现在只横向居中 */
+  transform: translateX(-50%);
   text-align: center;
-  z-index: 10; /* 保证在树上面 */
-  pointer-events: none; /* 让鼠标能穿透文字点到树 */
+  z-index: 10;
+  pointer-events: none; 
   width: 100%;
+  padding-bottom: 2rem; /* 留一点安全距离 */
 }
 
 .gold-text {
