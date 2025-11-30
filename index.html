@@ -2,14 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Gilded Emerald - Luxury Christmas Tree</title>
+    <title>The Gilded Wish - Luxury Christmas</title>
+    <!-- 预加载奢华字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- 3D 画布容器 -->
     <div id="app"></div>
-    <!-- 简单的加载提示 -->
-    <div id="loading">Generating Luxury Assets...</div>
+
+    <!-- 电影感字幕层 (初始隐藏) -->
+    <div id="intro-text">
+        <h1 class="gold-text">MERRY CHRISTMAS</h1>
+        <p class="sub-text">CLICK TO ILLUMINATE THE NIGHT</p>
+    </div>
+
+    <!-- 许愿输入弹窗 (默认隐藏) -->
+    <div id="wish-modal" class="hidden">
+        <div class="modal-content">
+            <h2 class="modal-title">Make a Wish</h2>
+            <input type="text" id="wish-input" placeholder="To world, peace and love..." maxlength="30" autocomplete="off">
+            <button id="wish-submit">CAST WISH</button>
+            <p class="modal-hint">Your words will become stardust.</p>
+            <div id="close-modal">×</div>
+        </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
